@@ -1,0 +1,27 @@
+FUNCTION DK(L INTEGER):BOOLEAN;
+BEGIN
+    CASE L OF
+        1: DK := (x=Vx);
+        2: DK := (Y=0);
+        3: DK := (y>0);
+    END;
+END:
+PROCEDURE ThiHanh(L INTERGER):BOOLEAN;
+BEGIN
+    CASE L OF
+        1: x := 0;
+        2: y := Vy;
+        3: BEGIN
+                k := min(Vx-x,y);
+                x := x + k;
+                y := y - k;
+            END;
+    END;
+END;
+CONST SO_LUAT = 3;
+BEGIN
+    WHILE (x<>z) AND (y<>z) DO BEGIN
+        FOR i:=1 TO SO_LUAT DO
+            IF DK(L) THEN ThiHanh(L);
+    END;
+END.
